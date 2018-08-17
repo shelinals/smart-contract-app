@@ -10,3 +10,5 @@ const inboxPath = path.resolve(__dirname, 'contracts', 'Inbox.sol'); //dirname -
 const source = fs.readFileSync(inboxPath, 'utf8'); //read file
 
 module.exports = solc.compile(source, 1).contracts[':Inbox']; //number of file
+// 1 is the number of contract
+//solc.compile(source,1) include 'contracts' object and ':Inbox' object containing various items such as Interface and Bytecodes (JSON)
